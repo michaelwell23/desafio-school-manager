@@ -1,0 +1,68 @@
+<div class="item-wraper">
+    
+    <div class="item">
+        <div>URL do Avatar</div>
+        <div>
+            <input type="url" name="avatar_url" placeholder="http://" value="{{student.avatar_url}}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Nome completo</div>
+        <div>
+            <input type="text" name="name" value="{{student.name}}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Email</div>
+        <div>
+            <input type="email" name="email" value="{{student.email}}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Data de nascimento</div>
+        <div>
+            <input type="date" name="birth_date" value="{{student.birth_date}}">
+        </div>
+    </div>
+
+    <div class="item">
+      <div>Ano escolar</div>
+      <div>
+        <select name="school_year" >
+            <option value="disabled">Selecione um tipo</option>
+            <option value="5º" {% if student.school_year == "5º"%} selected="selected" {% endif %}>5º ano do ensino fundamental </option>
+            <option value="6º" {% if student.school_year == "6º"%} selected="selected" {% endif %}>6º ano do ensino fundamental </option>
+            <option value="7º" {% if student.school_year == "7º"%} selected="selected" {% endif %}>7º ano do ensino fundamental </option>
+            <option value="8º" {% if student.school_year == "8º"%} selected="selected" {% endif %}>8º ano do ensino fundamental</option>
+            <option value="1º" {% if student.school_year == "1º"%} selected="selected" {% endif %}>1º ano do ensino médio</option>
+            <option value="2º" {% if student.school_year == "2º"%} selected="selected" {% endif %}>2º ano do ensino médio</option>
+            <option value="3º" {% if student.school_year == "3º"%} selected="selected" {% endif %}>3º ano do ensino médio</option>
+        </select>
+      </div>
+    </div> 
+
+    <div class="item">
+        <div>Carga Horária Semanal</div>
+        <div>
+            <input type="number" name="workload" value="{{student.workload}}">
+        </div>
+    </div>
+
+    <div class="item">
+    <div>Professor(a)</div>
+    <div>
+        <select name="teacher">
+            {% for teacher in teachersOptions %}
+                <option value="{{teacher.id}}" {% if member.teacher_id == teacher.id %} selected="selected" {% endif %}>
+                {{ teacher.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+    <button type="submit">Salvar</button>
+</div>
