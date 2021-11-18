@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="300px" />
+    <img alt="Launchbase" src=".github/home.png" />
 </h1>
 
 <h2 align="center">
@@ -39,9 +39,6 @@
 
 O SchoolManager é uma aplicação web de gerenciamento de escolha, responsável pelo controle de professores e alunos. Desenvolvido durante o bootcamp `LaunchBase` da [Rocketseat](https://rocketseat.com.br/). Com base no projeto [GymManager](https://github.com/michael23-lopes/gym-manager).
 
-<p align="center">
-  <img src=".github/home.png" alt="página principal">
-</p>
 
 <p align="center">
   <img src=".github/teachers.png" alt="Página de Professores">
